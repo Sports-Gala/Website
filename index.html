@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Gala 2026 | Sukkur IBA Kandhkot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --primary: #2D1B4E; --accent: #FFD700; }
+        
+        /* Smooth Scrolling */
+        html { scroll-behavior: smooth; }
+
+        /* Hero Container */
+        .hero-container {
+            width: 100%;
+            height: 70vh;
+            overflow: hidden;
+            position: relative;
+            background-color: var(--primary);
+            margin-top: 64px; 
+        }
+
+        .hero-banner {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transform: scale(1);
+            animation: zoomInHero 3s ease-out forwards;
+        }
+
+        @keyframes zoomInHero {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 60%, var(--primary));
+        }
+
+        /* Essential Fix for White Strip under images */
+        img { display: block; }
+
+        .game-card { transition: all 0.3s ease; }
+        .game-card:hover { transform: translateY(-10px); }
+        
+        .section-divider { border-bottom: 4px solid var(--accent); width: 60px; margin: 10px auto; }
+    </style>
+</head>
+<body class="bg-white font-sans text-gray-900">
+
+    <nav class="fixed top-0 w-full z-50 bg-[#2D1B4E]/90 backdrop-blur-md text-white p-4 shadow-xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html">
+                <img src="logo/Sports Gala 2026 Logo JPG.png" alt="Logo" class="h-10 md:h-12">
+            </a>
+            <div class="flex items-center space-x-8">
+                <a href="#games-section" class="hover:text-yellow-400 font-semibold transition">Games</a>
+                <a href="team.html" class="hover:text-yellow-400 font-semibold transition">Team</a>
+                <a href="registration.html" class="bg-[#FFD700] text-[#2D1B4E] px-6 py-2 rounded-full font-bold hover:scale-105 active:scale-95 transition shadow-lg">REGISTER NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-container">
+        <img src="banner/banner.jpg" alt="Sports Gala Banner" class="hero-banner">
+        <div class="hero-overlay"></div>
+    </div>
+
+    <section class="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-black text-[#2D1B4E] uppercase italic tracking-tighter mb-6">
+                    The Spirit of <span class="text-[#FFD700]">Unity & Play</span>
+                </h2>
+                
+                <div class="flex items-center justify-center mb-8">
+                    <div class="w-16 h-1 bg-[#FFD700] rounded-full"></div>
+                    <div class="mx-4 text-[#2D1B4E]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z" />
+                        </svg>
+                    </div>
+                    <div class="w-16 h-1 bg-[#FFD700] rounded-full"></div>
+                </div>
+
+                <div class="space-y-6">
+                    <p class="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
+                        <span class="text-[#2D1B4E] font-bold">Sports Gala 2026</span> is a grand celebration of athleticism and camaraderie. It is a vibrant arena where students unite to compete in a diverse array of indoor and outdoor games, weaving together a tapestry of <span class="text-[#2D1B4E] italic font-semibold">unforgettable joy, passion, and collective triumph</span>.
+                    </p>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-l-8 border-[#FFD700] inline-block mt-8 text-left">
+                        <p class="text-gray-600 uppercase tracking-widest text-sm font-bold mb-2">Organized & Led By</p>
+                        <p class="text-[#2D1B4E] text-lg md:text-xl font-bold">
+                            The Visionary Students of <span class="text-blue-700">BS-CS-VI</span>
+                        </p>
+                        <p class="text-gray-500 mt-2 italic font-serif">
+                            Under the expert supervision of our Campus Coordinator, 
+                            <span class="text-[#2D1B4E] font-bold not-italic">Sir Noor Nabi Dahar</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="games-section" class="py-20 container mx-auto px-4">
+        
+        <div class="mb-20">
+            <h2 class="text-4xl font-black text-[#2D1B4E] text-center uppercase tracking-tighter italic">Outdoor Games</h2>
+            <div class="section-divider mb-12"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <script>
+                    const outdoors = [
+                        { name: "Cricket", img: "logo/cricket logo.jpg", file: "cricket.html" },
+                        { name: "Tug of War", img: "logo/tug of war logo.jpg", file: "tug-of-war.html" },
+                        { name: "Volleyball", img: "logo/volley ball logo.jpg", file: "volleyball.html" },
+                        { name: "Lemon Spoon Race", img: "logo/lemon and spoon race logo.jpg", file: "lemon-and-spoon-race.html" }
+                    ];
+
+                    outdoors.forEach(game => {
+                        document.write(`
+                            <a href="${game.file}" class="game-card flex flex-col bg-white rounded-3xl shadow-2xl overflow-hidden group">
+                                <div class="relative h-64">
+                                    <img src="${game.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition"></div>
+                                </div>
+                                <div class="p-6 bg-[#2D1B4E] text-center flex-grow">
+                                    <h3 class="text-white text-xl font-bold uppercase tracking-wider">${game.name}</h3>
+                                </div>
+                            </a>
+                        `);
+                    });
+                </script>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="text-4xl font-black text-[#2D1B4E] text-center uppercase tracking-tighter italic">Indoor Games</h2>
+            <div class="section-divider mb-12"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <script>
+                    const indoors = [
+                        { name: "Badminton", img: "logo/badminton logo.jpg" },
+                        { name: "FoosBall", img: "logo/foosball logo.jpg" },
+                        { name: "PUBG Mobile", img: "logo/pubg logo.jpg" },
+                        { name: "Carrom", img: "logo/carrom logo.jpg" },
+                        { name: "Treasure Hunt", img: "logo/treasure hunt logo.jpg" },
+                        { name: "Ludo", img: "logo/ludo logo.jpg" },
+                        { name: "Chess", img: "logo/chess logo.jpg" },
+                        { name: "UNO Card Game", img: "logo/uno logo.jpg" },
+                        { name: "Table Tennis", img: "logo/table tennis logo.jpg" },
+                        { name: "Musical Chair", img: "logo/musical chair logo.jpg", file: "musical-chair.html" }
+                    ];
+
+                    indoors.forEach(game => {
+                        const fileName = game.file || game.name.toLowerCase().replace(/ /g, "-") + ".html";
+                        document.write(`
+                            <a href="${fileName}" class="game-card flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group">
+                                <div class="relative h-48">
+                                    <img src="${game.img}" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-[#2D1B4E]/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                        <span class="bg-yellow-400 text-[#2D1B4E] px-4 py-2 rounded-full font-bold">View Details</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 text-center flex-grow">
+                                    <h3 class="text-[#2D1B4E] text-lg font-bold">${game.name}</h3>
+                                </div>
+                            </a>
+                        `);
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-4 mt-20 mb-10 text-center">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-[#FFD700] rounded-full mb-6 shadow-lg animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#2D1B4E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+        </div>
+        <h2 class="text-3xl md:text-5xl font-black text-[#2D1B4E] uppercase italic tracking-tighter">
+            Honor Your <span class="text-[#FFD700] drop-shadow-sm">Achievement</span>
+        </h2>
+        <div class="flex items-center justify-center mt-4">
+            <div class="w-12 h-1 bg-[#FFD700] rounded-full"></div>
+            <div class="w-24 h-1 bg-[#2D1B4E] mx-2 rounded-full"></div>
+            <div class="w-12 h-1 bg-[#FFD700] rounded-full"></div>
+        </div>
+        <p class="mt-6 text-lg md:text-xl text-gray-600 font-medium max-w-2xl mx-auto leading-relaxed">
+            Every champion deserves a legacy. All participants of the <span class="text-[#2D1B4E] font-bold">Sports Gala 2026</span> will be awarded an official certificate of excellence, recognizing their spirit, dedication, and sportsmanship.
+        </p>
+    </div>
+
+    <div class="bg-gray-100 py-10 md:py-20 px-4">
+        <div id="certificate-container" class="relative bg-white mx-auto shadow-2xl border-t-8 border-[#2D1B4E] w-full max-w-4xl overflow-hidden flex flex-col justify-between p-6 md:p-12 min-h-[500px] md:min-h-[600px]">
+            
+            <div class="flex justify-between items-center mb-6 md:mb-0">
+                <img src="logo/Sports Gala 2026 Logo black.png" alt="Logo" class="w-16 md:w-32 h-auto">
+                <img src="logo/IBA logo blue.png" alt="IBA Logo Blue" class="w-20 md:w-32 h-auto">
+            </div>
+
+            <div class="text-center flex-grow flex flex-col justify-center">
+                <p class="text-gray-500 uppercase tracking-widest text-[10px] md:text-sm font-semibold mb-2 md:mb-6">This is to certify that</p>
+                <h1 class="text-3xl md:text-6xl font-serif text-[#2D1B4E] leading-tight mb-2">Participant Name</h1>
+                <div class="w-16 md:w-24 h-0.5 bg-gray-200 mx-auto my-4 md:my-6"></div>
+                <p class="text-xs md:text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed px-2">
+                    has successfully participated in the <span class="border-b border-gray-400 px-4 font-bold">_____</span> game in  
+                    <span class="font-bold text-[#2D1B4E]">Sports Gala 2026</span> at 
+                    <span class="italic text-[#2D1B4E]/80">Sukkur IBA University Kandhkot Campus</span>.
+                </p>
+            </div>
+
+            <div class="flex justify-between items-end mt-10 md:mt-12">
+                <div class="text-center w-1/3">
+                    <div class="mb-1 md:mb-2 font-serif text-sm md:text-2xl italic text-gray-800 border-b border-gray-300 pb-1">Coordinator</div>
+                    <p class="text-[8px] md:text-xs font-bold uppercase text-gray-500">Noor Nabi Dahar</p>
+                    <p class="text-[7px] md:text-[9px] text-gray-400">Sports Gala Committee</p>
+                </div>
+                <div class="flex flex-col items-center w-1/3">
+                    <div class="w-12 h-12 md:w-20 md:h-20 bg-[#FFD700] rounded-full flex items-center justify-center shadow-lg border-2 md:border-4 border-white outline outline-1 outline-yellow-400">
+                        <img src="logo/Sports Gala 2026 Logo black.png" class="w-8 md:w-12 opacity-80 grayscale brightness-50">
+                    </div>
+                    <p class="hidden md:block text-[10px] text-gray-400 mt-4 uppercase font-bold tracking-tighter italic">Official Document</p>
+                </div>
+                <div class="text-center w-1/3">
+                    <div class="mb-1 md:mb-2 font-serif text-sm md:text-2xl italic text-gray-800 border-b border-gray-300 pb-1">Campus Director</div>
+                    <p class="text-[8px] md:text-xs font-bold uppercase text-gray-500">Naveed Akhtar Qureshi</p>
+                    <p class="text-[7px] md:text-[9px] text-gray-400">Sukkur IBA Kandhkot</p>
+                </div>
+            </div>
+
+            <div class="mt-6 md:absolute md:bottom-4 md:left-12 text-center md:text-left">
+                <p class="text-[7px] md:text-[9px] text-gray-400 font-mono">Issued on: February 17, 2026 | ID: Sports Gala 2026 SIBA</p>
+            </div>
+            
+            <div class="absolute -right-16 -bottom-16 w-32 h-32 md:w-48 md:h-48 bg-[#2D1B4E]/5 rounded-full z-0"></div>
+        </div>
+    </div>
+
+    <footer class="bg-[#2D1B4E] text-white py-12 px-4 border-t-4 border-yellow-400">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <img src="logo/Sports Gala 2026 Logo JPG.png" class="h-20">
+            <div class="text-center md:text-right">
+                <p class="font-bold text-lg">Sukkur IBA University Kandhkot Campus</p>
+                <p class="text-gray-400">Copyright © 2026. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
